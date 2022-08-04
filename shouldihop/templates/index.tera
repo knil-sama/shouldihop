@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+    <body>
+    <form action="" method="post">
+        <label for="current_company_salary">Current yearly company salary:</label><br>
+        <input type="number" id="current_company_salary" name="current_company_salary" value={{current_company_salary}}><br>
+        <label for="new_company_salary">New yearly company salary:</label><br>
+        <input type="number" id="new_company_salary" name="new_company_salary" value={{new_company_salary}}>
+        <label for="stay_window">Stay windows (in year):</label><br>
+        <input type="number" id="stay_window" name="stay_window" value={{stay_window}}>
+        <input type="submit" value="Submit">
+        </form> 
+        {% if has_result %}
+        <p>total current company salary: {{total_current_company_salary}}, total new company salary {{total_new_company_salary}}, gain {{gain}}</p>
+      {% endif %}
+
+</body>
+</html>
